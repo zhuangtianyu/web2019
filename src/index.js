@@ -1,5 +1,7 @@
 import './index.css'
 
-console.log('modify test')
-
 document.write('some words')
+
+if (module.hot) {
+  // module.hot.accept()
+}
