@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Start from 'src/page/Start/index.vue'
+import Intro from 'src/page/Intro/index.vue'
 
 Vue.use(VueRouter)
 
@@ -8,8 +8,8 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'start',
-      component: Start
+      name: 'intro',
+      component: Intro
     }
   ]
 })
