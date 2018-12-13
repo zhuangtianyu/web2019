@@ -1,7 +1,6 @@
 <template>
-  <div class="intro">
+  <div class="intro container">
     hello intro!
-    <span class="test-dom">test-dom</span>
   </div>
 </template>
 

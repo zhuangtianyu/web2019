@@ -1,4 +1,26 @@
-body {
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body, ul, p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  border-style: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
   color: #333;
-  font-size: 16px;
 }
