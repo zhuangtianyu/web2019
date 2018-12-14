@@ -2,7 +2,8 @@
   const doc = document.documentElement
 
   function calcRem () {
-    const rem = doc.clientWidth / 10
+    const width = doc.clientWidth > 1200 ? 1200 : doc.clientWidth
+    const rem = width / 10
     doc.style.fontSize = `${rem}px`
   }
 

@@ -3,3 +3,52 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* PC */
+.fz-largest {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.fz-larger {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+.fz-large {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.fz-normal {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.fz-small {
+  font-size: 14px;
+}
+
+.fz-smaller {
+  font-size: 12px;
+}
+
+/* ipad pro */
+@media (max-width: 1024px) {
+}
+
+/* ipad */
+@media (max-width: 768px) {
+}
+
+/* iphone 6/7/8 plus */
+@media (max-width: 414px) {
+}
+
+/* iphone 6/7/8/X */
+@media (max-width: 375px) {
+}
+
+/* iphone 5s/SE */
+@media (max-width: 320px) {
+}

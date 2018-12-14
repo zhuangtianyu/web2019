@@ -1,10 +1,10 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App'
 import router from './router'
 
-import './util/rem.js'
-import './style/reset.css'
-import './style/media.css'
+import './util/rem'
+import './style/reset'
+import './style/media'
 
 new Vue({
   el: '#app',
