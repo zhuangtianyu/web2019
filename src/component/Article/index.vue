@@ -20,10 +20,10 @@ export default {
   .article-main {
     .title {
       font-weight: bolder;
-      margin-bottom: 0.3em;
+      // margin-bottom: 0.3em;
     }
     .author-info {
-      margin-bottom: 0.6em;
+      margin-bottom: 1.2em;
     }
     p {
       text-indent: 2em;

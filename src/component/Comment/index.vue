@@ -33,16 +33,19 @@ export default {
       font-size: 0;
       padding: 10px 10px 10px 0;
       border-bottom: 1px solid #dcdcdc;
+      &:last-child {
+        border-bottom: none;
+      }
     }
     .user-info {
       display: inline-block;
       vertical-align: top;
       text-align: center;
-      width: 0.8rem;
+      width: 92px;
       .user-avatar {
         display: inline-block;
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 72px;
+        height: 72px;
         border: 1px solid #333;
         margin-bottom: 6px;
       }
@@ -54,16 +57,13 @@ export default {
     .content {
       display: inline-block;
       vertical-align: top;
-      width: calc(9.2rem - 10px);
+      width: calc(100% - 92px);
     }
   }
 
   @media (max-width: 1200px) {
     .comment {
       padding: 0 6px;
-      .content {
-        width: calc(100% - 0.8rem);
-      }
     }
   }
 </style>

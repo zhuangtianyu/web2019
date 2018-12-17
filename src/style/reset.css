@@ -5,8 +5,9 @@
 }
 
 html {
-  line-height: 1.15;
+  line-height: 1.76;
   box-sizing: border-box;
+  font-family: "Microsoft YaHei";
   -webkit-text-size-adjust: 100%;
 }
 
