@@ -6,6 +6,7 @@ import Article from 'src/page/Article'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',

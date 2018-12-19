@@ -11,6 +11,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  font-size: 14px;
+}
+
 body, ul, p {
   margin: 0;
 }
@@ -30,5 +34,5 @@ img {
 a {
   background-color: transparent;
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
