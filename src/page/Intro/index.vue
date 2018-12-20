@@ -1,6 +1,7 @@
 <template>
   <div class="intro container">
-    hello intro!
+    <div>hello intro!</div>
+    <router-link to="/article/1">朱自清-背影-demo</router-link>
   </div>
 </template>
 
