@@ -8,7 +8,7 @@ module.exports = {
     app: path.resolve(__dirname, '../src/index.js')
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin([path.resolve(__dirname, '../dist')], { allowExternal: true }),
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, '../src/index.html') }),
     new VueLoaderPlugin()
   ],
