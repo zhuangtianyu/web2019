@@ -31,7 +31,7 @@ export default {
     }
     .comment-item {
       font-size: 0;
-      padding: 10px 10px 10px 0;
+      padding: 16px 10px 16px 0;
       border-bottom: 1px solid #dcdcdc;
       &:last-child {
         border-bottom: none;
@@ -58,6 +58,7 @@ export default {
       display: inline-block;
       vertical-align: top;
       width: calc(100% - 92px);
+      line-height: 1.92;
     }
   }
 
