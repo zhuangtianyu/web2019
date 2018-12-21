@@ -27,6 +27,7 @@ export default {
     }
     p {
       text-indent: 2em;
+      line-height: 1.82;
       margin-bottom: 0.6em;
       &:last-child {
         margin-bottom: 0;

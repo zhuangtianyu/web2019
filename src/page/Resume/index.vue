@@ -1,5 +1,7 @@
 <template>
-  <div class="resume container fz-normal">帅</div>
+  <div class="resume container fz-normal">
+    酷
+  </div>
 </template>
 
 <script>

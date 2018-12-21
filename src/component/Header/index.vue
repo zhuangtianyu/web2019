@@ -27,7 +27,7 @@ export default {
       { text: '关于作者', to: '/resume' }
     ],
     backNav: [
-      { text: '返回首页', to: '/' }
+      { text: '返回推荐', to: '/recommend' }
     ]
   }),
   computed: {
