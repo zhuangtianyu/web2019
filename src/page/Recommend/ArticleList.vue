@@ -39,9 +39,6 @@ export default {
       text-overflow: ellipsis;
       white-space: nowrap;
       margin-bottom: 8px;
-      &:hover {
-        color: #FF6A6A;
-      }
     }
     .article-info {
       font-size: 0;
