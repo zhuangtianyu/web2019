@@ -9,11 +9,15 @@ html {
   box-sizing: border-box;
   font-family: "Microsoft YaHei";
   -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   font-size: 14px;
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 body, ul, p {
