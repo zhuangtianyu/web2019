@@ -1,16 +1,33 @@
 <template>
   <div class="recommend container">
+    <div class="article-filter">
+      <Button
+        v-for="(item, index) in articleTypeList"
+        :key="index"
+        :text="item.text"
+        :class="{ active: item.value === articleType }"
+        @click.native="articleType = item.value"
+      />
+    </div>
     <ArticleList :data="articleList" />
   </div>
 </template>
 
 <script>
 import ArticleList from './ArticleList'
+import Button from 'src/component/Button'
 
 export default {
   name: 'recommend',
-  components: { ArticleList },
+  components: { ArticleList, Button },
   data: () => ({
+    articleType: 0,
+    articleTypeList: [
+      { value: 0, text: '全部' },
+      { value: 1, text: '技术' },
+      { value: 2, text: '生活' },
+      { value: 3, text: '音乐' }
+    ],
     articleList: [
       { title: '背影', author: '朱自清', date: '2010-01-01', comment: '10', id: 1 },
       { title: '你离开了南京, 从此没有人和我说话', author: '李志', date: '2010-01-01', comment: '10', id: 1 },
@@ -25,8 +42,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .recommend.container {
-    padding-top: 42px;
+  // .recommend.container {
+  //   padding-top: 42px;
+  // }
+
+  .article-filter {
+    font-size: 0;
+    margin-bottom: 10px;
+    .button {
+      margin-right: 6px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .article-filter {
+      padding: 0 6px;
+    }
   }
 </style>
 

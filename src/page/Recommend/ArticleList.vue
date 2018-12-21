@@ -33,6 +33,9 @@ export default {
       padding: 12px 0;
       border-bottom: 1px solid #dcdcdc;
       cursor: pointer;
+      &:first-child {
+        border-top: 1px solid #dcdcdc;
+      }
     }
     .article-title {
       overflow: hidden;
