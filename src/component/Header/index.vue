@@ -55,6 +55,7 @@ export default {
       display: inline-block;
       vertical-align: top;
       padding: 0 0.6em;
+      cursor: pointer;
       &:after {
         position: absolute;
         top: 0;
@@ -71,9 +72,6 @@ export default {
       }
       &:last-child:after {
         display: none;
-      }
-      &:hover {
-        cursor: pointer;
       }
       &.router-link-active {
         color: #FF6A6A;
