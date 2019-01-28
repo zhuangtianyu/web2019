@@ -9,9 +9,9 @@
     >
       <div class="article-title fz-normal">{{item.title}}</div>
       <div class="article-info">
-        <div class="author fz-small">{{item.author}}</div>
-        <div class="date fz-small">{{item.date}}</div>
-        <div class="comment fz-small">评论: {{item.comment}}</div>
+        <div class="author fz-smaller">{{item.author}}</div>
+        <div class="date fz-smaller">{{item.date}}</div>
+        <div class="comment fz-smaller">评论: {{item.comment}}</div>
       </div>
     </router-link>
     <div class="end fz-small">没有更多了</div>
@@ -30,11 +30,13 @@ export default {
 <style lang="scss" scoped>
   .article-list {
     .article-item {
-      padding: 12px 0;
-      border-bottom: 1px solid #dcdcdc;
       cursor: pointer;
-      &:first-child {
-        border-top: 1px solid #dcdcdc;
+      padding: 12px 6px;
+      border-radius: 0.3em;
+      background-color: #fff;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
     .article-title {
