@@ -3,11 +3,11 @@
     <div class="container">
       <ul class="nav">
         <router-link
-          tag="li"
           class="fz-normal"
-          v-for="(item, index) in navList"
-          :key="index"
-          :to="item.to"
+          v-for="item in navList"
+          :key="item.name"
+          :to="{ name: item.name }"
+          tag="li"
           exact
         >
           {{item.text}}
@@ -20,21 +20,32 @@
 <script>
 export default {
   name: 'header-component',
-  data: () => ({
-    defaultNav: [
-      { text: '首页', to: '/' },
-      { text: '推荐', to: '/recommend' },
-      { text: '关于作者', to: '/resume' }
-    ],
-    backNav: [
-      { text: '返回推荐', to: '/recommend' }
-    ]
-  }),
   computed: {
     navList () {
       const routeName = this.$route.name
-      const defaultList = ['intro', 'resume', 'recommend']
-      return defaultList.includes(routeName) ? this.defaultNav : this.backNav
+      switch (routeName)
+      {
+        case 'intro':
+        case 'recommend':
+        case 'resume':
+        return [
+          { text: '首页', name: 'intro' },
+          { text: '推荐', name: 'recommend' },
+          { text: '关于作者', name: 'resume' }
+        ]
+        break
+
+        case 'article':
+        return [
+          { text: '返回推荐', name: 'recommend' }
+        ]
+        break
+
+        default:
+        return [
+          { text: '晚安', name: 'intro' }
+        ]
+      }
     }
   }
 }
