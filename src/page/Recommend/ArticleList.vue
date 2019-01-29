@@ -31,7 +31,7 @@ export default {
   .article-list {
     .article-item {
       cursor: pointer;
-      padding: 12px 6px;
+      padding: 12px 6px 6px;
       border-radius: 0.3em;
       background-color: #fff;
       margin-bottom: 10px;
@@ -51,6 +51,9 @@ export default {
     .article-info div {
       display: inline-block;
       color: #333;
+    }
+    .article-info .author {
+      margin-right: 3px;
     }
     .article-info .comment {
       padding-right: 2px;

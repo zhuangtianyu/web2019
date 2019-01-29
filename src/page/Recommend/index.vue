@@ -37,7 +37,24 @@ export default {
       { title: '我们不是只有现在吗', author: '曾轶可', date: '2010-01-01', comment: '10', id: 1 },
       { title: '电车计划', author: '曾轶可', date: '2010-01-01', comment: '10', id: 1 }
     ]
-  })
+  }),
+  mounted () {
+    this.modal({
+      title: '头部-测试',
+      message: '文案提示-测试',
+      confirm: () => {
+        console.log(`${this.$route.name}-确认`)
+      },
+      cancel: () => {
+        console.log(`${this.$route.name}-取消`)
+      }
+    })
+  },
+  watch: {
+    articleType (value, oldValue) {
+      console.log(`文章类型变成了${value}类型`)
+    }
+  }
 }
 </script>
 

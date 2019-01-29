@@ -20,6 +20,7 @@ export default {
     line-height: 1.52;
     border: 1px solid #999;
     border-radius: 0.2em;
+    background-color: #fff;
     cursor: pointer;
     &.active {
       color: #FF6A6A;
