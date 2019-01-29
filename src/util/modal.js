@@ -1,3 +1,13 @@
+/**
+ * @param title: 标题
+ * @param message: 内容
+ * @param confirm: 确认 callback
+ * @param cancel: 取消 callback
+ * @param confirmText: 确认文案
+ * @param cancelText: 取消文案
+ * @param cancelSupport: 是否需要取消按钮
+ */
+
 const modal = (config) => {
   const {
     title = '',
@@ -15,6 +25,12 @@ const modal = (config) => {
     Object.assign(child.style, style)
     child.className = klass
     parent.appendChild(child)
+  }
+
+  const destory = () => {
+    const body = document.querySelector('body')
+    const shadow = document.querySelector('.modal-shadow')
+    body.removeChild(shadow)
   }
 
   const init = () => {
@@ -71,7 +87,7 @@ const modal = (config) => {
       cursor: 'pointer'
     }
     close.innerHTML = '✖️'
-    close.onclick = () => { body.removeChild(shadow) }
+    close.onclick = destory
     append(header, close, closeStyle, 'modal-close')
 
     // content 添加 modalBody
@@ -112,7 +128,7 @@ const modal = (config) => {
       cancelButton.innerHTML = cancelText
       cancelButton.onclick = () => {
         cancel()
-        body.removeChild(shadow)
+        destory()
       }
       append(footer, cancelButton, cancelStyle, 'modal-cancel-button')
     }
@@ -122,7 +138,7 @@ const modal = (config) => {
     confirmButton.innerHTML = confirmText
     confirmButton.onclick = () => {
       confirm()
-      body.removeChild(shadow)
+      destory()
     }
     append(footer, confirmButton, confirmStyle, 'modal-confirm-button')
   }
