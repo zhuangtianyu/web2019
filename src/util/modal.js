@@ -23,7 +23,7 @@ const modal = (config) => {
 
   const append = (parent, child, style, klass) => {
     Object.assign(child.style, style)
-    child.className = klass
+    child.classList.add(klass)
     parent.appendChild(child)
   }
 
