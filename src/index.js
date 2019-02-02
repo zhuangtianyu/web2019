@@ -9,8 +9,8 @@ import './style/media'
 import modal from './util/modal'
 import loading from './util/loading'
 
-Vue.prototype.modal = modal
-Vue.prototype.loading = loading
+Vue.prototype.$modal = modal
+Vue.prototype.$loading = loading
 
 new Vue({
   el: '#app',

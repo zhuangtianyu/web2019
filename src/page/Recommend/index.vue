@@ -39,7 +39,7 @@ export default {
     ]
   }),
   mounted () {
-    // this.modal({
+    // this.$modal({
     //   title: '头部-测试',
     //   message: '文案提示-测试',
     //   confirm: () => {
@@ -49,8 +49,8 @@ export default {
     //     console.log(`${this.$route.name}-取消`)
     //   }
     // })
-    setTimeout(this.loading.show, 500)
-    setTimeout(this.loading.hide, 1500)
+    setTimeout(this.$loading.show, 500)
+    setTimeout(this.$loading.hide, 1500)
   },
   watch: {
     articleType (value, oldValue) {
