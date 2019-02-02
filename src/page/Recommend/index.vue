@@ -39,18 +39,10 @@ export default {
     ]
   }),
   mounted () {
-    // this.$modal({
-    //   title: '头部-测试',
-    //   message: '文案提示-测试',
-    //   confirm: () => {
-    //     console.log(`${this.$route.name}-确认`)
-    //   },
-    //   cancel: () => {
-    //     console.log(`${this.$route.name}-取消`)
-    //   }
-    // })
-    setTimeout(this.$loading.show, 500)
-    setTimeout(this.$loading.hide, 1500)
+    this.$axios.get('/article/list/1', {})
+      .then((result) => {
+        console.log(result)
+      })
   },
   watch: {
     articleType (value, oldValue) {
