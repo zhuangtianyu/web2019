@@ -52,7 +52,7 @@ const modal = (config) => {
     const content = create()
     const contentStyle = {
       display: 'inline-block',
-      width: '70%',
+      width: '80%',
       maxWidth: '300px',
       minHeight: '100px',
       backgroundColor: '#fff',
