@@ -36,6 +36,7 @@ export default {
         break
 
         case 'article':
+        case 'write':
         return [
           { text: '返回推荐', name: 'recommend' }
         ]

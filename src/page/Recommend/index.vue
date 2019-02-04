@@ -8,6 +8,7 @@
         :class="{ active: item.value === articleType }"
         @click.native="articleType = item.value"
       />
+      <router-link tag="div" class="write fz-small" :to="{ name: 'write' }">写文章</router-link>
     </div>
     <ArticleList :data="articleList" />
   </div>
@@ -24,9 +25,9 @@ export default {
     articleType: 0,
     articleTypeList: [
       { value: 0, text: '全部' },
-      { value: 1, text: '技术' },
-      { value: 2, text: '生活' },
-      { value: 3, text: '音乐' }
+      { value: 1, text: '生活' },
+      { value: 2, text: '音乐' },
+      { value: 3, text: '技术' }
     ],
     articleList: [
       { title: '背影', author: '朱自清', date: '2010-01-01', comment: '10', id: 1 },
@@ -39,10 +40,17 @@ export default {
     ]
   }),
   mounted () {
-    this.$axios.get('/article/list/1', {})
-      .then((result) => {
-        console.log(result)
-      })
+    // this.$axios.get('/article/list/1', {})
+    //   .then((result) => {
+    //     console.log(result)
+    //     const message = '请求成功'
+    //     this.$modal({ message })
+    //   })
+    // this.$axios.post('./article/write/1', {})
+    //   .then((result) => {
+    //     const message = '创建成功'
+    //     this.$modal({ message })
+    //   })
   },
   watch: {
     articleType (value, oldValue) {
@@ -65,6 +73,16 @@ export default {
       &:last-child {
         margin-right: 0;
       }
+    }
+
+    .write {
+      float: right;
+      color: #fff;
+      padding: 0 0.3em;
+      line-height: 20px;
+      background-color: #FF6A6A;
+      vertical-align: middle;
+      cursor: pointer;
     }
   }
 

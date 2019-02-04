@@ -3,6 +3,7 @@
  * @param message: 内容
  * @param confirm: 确认 callback
  * @param cancel: 取消 callback
+ * @param close: 关闭 callback
  * @param confirmText: 确认文案
  * @param cancelText: 取消文案
  * @param cancelSupport: 是否需要取消按钮
@@ -10,10 +11,11 @@
 
 const modal = (config) => {
   const {
-    title = '',
+    title = '提示',
     message = '',
     confirm = () => {},
     cancel,
+    close = () => {},
     confirmText = '确定',
     cancelText = '取消',
     cancelSupport = false
@@ -80,15 +82,18 @@ const modal = (config) => {
     append(header, titleEl, titleStyle, 'modal-title')
 
     // header 添加 close
-    const close = create()
+    const closeEl = create()
     const closeStyle = {
       display: 'inline-block',
       float: 'right',
       cursor: 'pointer'
     }
-    close.innerHTML = '✖️'
-    close.onclick = destory
-    append(header, close, closeStyle, 'modal-close')
+    closeEl.innerHTML = '✖️'
+    closeEl.onclick = () => {
+      close()
+      destory()
+    }
+    append(header, closeEl, closeStyle, 'modal-close')
 
     // content 添加 modalBody
     const modalBody = create()
