@@ -1,26 +1,47 @@
 <template>
   <div class="comment">
-    <div class="comment-header fz-normal">最新评论</div>
+    <div class="comment-header">
+      <div class="new-comment fz-normal">最新评论</div>
+      <div class="write-comment fz-small" @click="edit = !edit">{{ edit === true ? '取消编辑' : '写评论' }}</div>
+    </div>
     <template v-if="data.length">
       <div class="comment-item fz-normal" v-for="(item, index) in data" :key="index">
         <div class="user-info">
           <div class="user-avatar"></div>
           <div class="user-name fz-small">{{item.userName}}</div>
+          <div class="create-time fz-smaller">{{item.createTime}}</div>
         </div>
         <div class="content fz-small">
           {{item.content}}
         </div>
       </div>
     </template>
-    <div class="no-comment fz-small" v-else>暂无评论</div>
+    <div class="no-comment fz-small" v-if="data.length === 0 && edit === false">暂无评论</div>
+    <WriteComment :edit.sync="edit" />
   </div>
 </template>
 
 <script>
+import WriteComment from './write-comment'
+
 export default {
   name: 'comment',
   props: {
     data: { type: Array, required: true }
+  },
+  components: { WriteComment },
+  data: () => ({
+    edit: false
+  }),
+  watch: {
+    edit (value, oldValue) {
+      if (value === true && oldValue === false) {
+        this.$nextTick(() => {
+          const scrollHeight = document.documentElement.scrollHeight
+          window.scrollTo(0, scrollHeight)
+        })
+      }
+    }
   }
 }
 </script>
@@ -30,6 +51,19 @@ export default {
     .comment-header {
       font-weight: 600;
       border-bottom: 1px solid #333;
+      .new-comment {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .write-comment {
+        float: right;
+        color: #fff;
+        padding: 0 0.3em;
+        line-height: 20px;
+        background-color: #FF6A6A;
+        margin-top: 5px;
+        cursor: pointer;
+      }
     }
     .comment-item {
       font-size: 0;
@@ -51,9 +85,8 @@ export default {
         border: 1px solid #333;
         margin-bottom: 6px;
       }
-      .user-name {
-        width: 100%;
-        display: inline-block;
+      .create-time {
+        line-height: 1.2;
       }
     }
     .content {

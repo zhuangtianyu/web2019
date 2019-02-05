@@ -151,7 +151,7 @@ export default {
       padding-bottom: 6px;
       border-bottom: 1px solid #fff;
       .label,
-      .textarea {
+      .write-item-content {
         vertical-align: top;
       }
     }

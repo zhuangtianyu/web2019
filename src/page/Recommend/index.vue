@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import ArticleList from './ArticleList'
+import ArticleList from './article-list'
 import Button from 'src/component/Button'
 
 export default {
@@ -65,7 +65,7 @@ export default {
       padding: 0 0.3em;
       line-height: 20px;
       background-color: #FF6A6A;
-      vertical-align: middle;
+      margin-top: 1px;
       cursor: pointer;
     }
   }
