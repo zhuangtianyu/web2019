@@ -2,7 +2,7 @@
   <div class="comment">
     <div class="comment-header">
       <div class="new-comment fz-normal">最新评论</div>
-      <div class="write-comment fz-small" @click="edit = !edit">{{ edit === true ? '取消编辑' : '写评论' }}</div>
+      <div class="write-comment fz-small" @click="edit = !edit">{{ edit ? '取消编辑' : '写评论' }}</div>
     </div>
     <template v-if="data.length">
       <div class="comment-item fz-normal" v-for="(item, index) in data" :key="index">
@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
   .comment {
     .comment-header {
+      position: relative;
       font-weight: 600;
       border-bottom: 1px solid #333;
       .new-comment {
@@ -56,12 +57,17 @@ export default {
         vertical-align: middle;
       }
       .write-comment {
-        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
         color: #fff;
         padding: 0 0.3em;
+        height: 20px;
         line-height: 20px;
+        text-align: center;
         background-color: #FF6A6A;
-        margin-top: 5px;
         cursor: pointer;
       }
     }

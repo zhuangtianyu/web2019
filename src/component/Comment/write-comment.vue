@@ -102,12 +102,19 @@ export default {
   .write-item-content input {
     width: 60%;
     max-width: 230px;
+    font-size: 14px;
+    height: 24px;
+    line-height: 20px;
+    padding: 0 3px;
   }
 
   .write-item-content textarea {
     display: block;
     width: 90%;
     height: 60px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 3px;
     margin-bottom: 10px;
     resize: none;
     &:last-child {

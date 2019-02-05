@@ -50,6 +50,7 @@ export default {
   // }
 
   .article-filter {
+    position: relative;
     font-size: 0;
     margin-bottom: 10px;
     .button {
@@ -60,12 +61,17 @@ export default {
     }
 
     .write {
-      float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
       color: #fff;
       padding: 0 0.3em;
+      height: 20px;
       line-height: 20px;
+      text-align: center;
       background-color: #FF6A6A;
-      margin-top: 1px;
       cursor: pointer;
     }
   }
@@ -73,6 +79,9 @@ export default {
   @media (max-width: 1200px) {
     .article-filter {
       padding: 0 6px;
+      .write {
+        right: 6px;
+      }
     }
   }
 </style>

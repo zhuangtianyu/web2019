@@ -16,7 +16,6 @@
       <div class="label">分类:</div>
       <div class="write-item-content">
         <Button
-          size="smaller"
           :class="['type-button', { active: item.value === params.type }]"
           v-for="item in typeList"
           :key="item.value"
@@ -160,6 +159,10 @@ export default {
   .write-item-content input {
     width: 60%;
     max-width: 230px;
+    font-size: 14px;
+    height: 24px;
+    line-height: 20px;
+    padding: 0 3px;
   }
 
   .write-item-content .type-button {
@@ -174,7 +177,10 @@ export default {
   .write-item-content textarea {
     display: block;
     width: 90%;
-    height: 60px;
+    height: 80px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 3px;
     margin-bottom: 10px;
     &:last-child {
       margin-bottom: 0;
