@@ -77,8 +77,14 @@ export default {
       if (this.params.title === '') {
         return this.$modal({ message: '请填写标题' })
       }
+      if (this.params.title.length > 30) {
+        return this.$modal({ message: '标题长度不超过30字' })
+      }
       if (this.params.author === '') {
         return this.$modal({ message: '请填写作者' })
+      }
+      if (this.params.author.length > 10) {
+        return this.$modal({ message: '作者长度不超过10字' })
       }
       const content =
         Object.assign([], this.params.content)

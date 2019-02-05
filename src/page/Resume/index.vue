@@ -11,7 +11,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  @media (max-width: 1200px) {
+    .resume {
+      padding: 0 6px;
+    }
+  }
 </style>
 
 

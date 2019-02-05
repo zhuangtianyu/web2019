@@ -10,7 +10,7 @@
       <div class="article-title fz-normal">{{item.title}}</div>
       <div class="article-info">
         <div class="author fz-smaller">{{item.author}}</div>
-        <div class="date fz-smaller">{{item.date}}</div>
+        <div class="date fz-smaller">{{item.createTime}}</div>
         <div class="comment fz-smaller">评论: {{item.comment}}</div>
       </div>
     </router-link>

@@ -1,16 +1,18 @@
 <template>
   <div class="comment">
     <div class="comment-header fz-normal">最新评论</div>
-    <div class="comment-item fz-normal" v-if="data.length" v-for="(item, index) in data" :key="index">
-      <div class="user-info">
-        <div class="user-avatar"></div>
-        <div class="user-name fz-small">{{item.userName}}</div>
+    <template v-if="data.length">
+      <div class="comment-item fz-normal" v-for="(item, index) in data" :key="index">
+        <div class="user-info">
+          <div class="user-avatar"></div>
+          <div class="user-name fz-small">{{item.userName}}</div>
+        </div>
+        <div class="content fz-small">
+          {{item.content}}
+        </div>
       </div>
-      <div class="content fz-small">
-        {{item.content}}
-      </div>
-    </div>
-    <div v-else>暂无评论</div>
+    </template>
+    <div class="no-comment fz-small" v-else>暂无评论</div>
   </div>
 </template>
 
@@ -60,6 +62,13 @@ export default {
       width: calc(100% - 92px);
       line-height: 1.92;
     }
+  }
+
+  .no-comment {
+    color: #666;
+    text-align: center;
+    line-height: 3em;
+    padding-bottom: 1em;
   }
 
   @media (max-width: 1200px) {

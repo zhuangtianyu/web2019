@@ -3,9 +3,9 @@
     <div class="title fz-largest">{{data.title}}</div>
     <div class="author-info fz-small">
       <span>{{data.author}}</span>
-      <span>{{data.date}}</span>
+      <span>{{data.createTime}}</span>
     </div>
-    <p class="fz-normal" v-for="(item, index) in data.content" :key="index">{{item}}</p>
+    <p class="fz-normal" v-for="(item, index) in data.content" :key="index" v-html="item"></p>
   </div>
 </template>
 
