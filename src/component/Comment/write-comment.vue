@@ -11,7 +11,7 @@
       <div class="write-item-content">
         <textarea
           class="content-item"
-          v-model="params.comment"
+          v-model="params.content"
         />
       </div>
     </div>
@@ -34,7 +34,7 @@ export default {
   data: () => ({
     params: {
       userName: '',
-      comment: ''
+      content: ''
     }
   }),
   methods: {
@@ -45,17 +45,22 @@ export default {
       if (this.params.userName.length > 10) {
         return this.$modal({ message: '姓名长度不超过10字' })
       }
-      if (this.params.comment === '') {
+      if (this.params.content === '') {
         return this.$modal({ message: '请输入评论' })
       }
-      if (this.params.comment.length > 120) {
+      if (this.params.content.length > 120) {
         return this.$modal({ message: '评论长度不超过120字' })
       }
       return true
     },
     submit () {
       if (this.validate() !== true) { return }
-      console.log(this.params)
+      const articleID = this.$route.params.id
+      const { userName, content } = this.params
+      this.$axios.post('/article/comment', { userName, content, articleID })
+        .then(() => {
+          this.$emit('reload')
+        })
     }
   }
 }
