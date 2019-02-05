@@ -17,7 +17,7 @@
       </div>
     </template>
     <div class="no-comment fz-small" v-if="data.length === 0 && edit === false">暂无评论</div>
-    <WriteComment :edit.sync="edit" />
+    <WriteComment :edit.sync="edit" @reload="$emit('reload')" />
   </div>
 </template>
 

@@ -17,7 +17,7 @@
     </div>
     <div class="button-group">
       <Button class="active submit" @click.native="submit" text="提交" />
-      <Button class="cancel" @click.native="$emit('update:edit', false)" text="取消" />
+      <Button class="cancel" @click.native="cancel" text="取消" />
     </div>
   </div>
 </template>
@@ -53,6 +53,9 @@ export default {
       }
       return true
     },
+    cancel () {
+      this.$emit('update:edit', false)
+    },
     submit () {
       if (this.validate() !== true) { return }
       const articleID = this.$route.params.id
@@ -60,6 +63,7 @@ export default {
       this.$axios.post('/article/comment', { userName, content, articleID })
         .then(() => {
           this.$emit('reload')
+          this.cancel()
         })
     }
   }
