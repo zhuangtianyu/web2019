@@ -4,7 +4,7 @@
       class="article-item"
       tag="div"
       v-for="(item, index) in data"
-      :to="`/article/${item.id}`"
+      :to="{ name: 'article', params: { id: item.id, from: 'recommend' } }"
       :key="index"
     >
       <div class="article-title fz-normal">{{item.title}}</div>

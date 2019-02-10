@@ -15,7 +15,7 @@
           </router-link>
         </template>
         <template v-else>
-          <li class="fz-normal" @click="$router.back()">返回</li>
+          <li class="fz-normal" @click="routerBack">返回</li>
         </template>
       </ul>
     </div>
@@ -55,8 +55,10 @@ export default {
     }
   },
   methods: {
-    noAction () {
-      console.log(123)
+    routerBack () {
+      this.$route.params.from === 'recommend'
+        ? this.$router.back()
+        : this.$router.push({ name: 'intro' })
     }
   }
 }
