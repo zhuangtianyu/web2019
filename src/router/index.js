@@ -29,7 +29,8 @@ const router = new VueRouter({
     {
       path: '/recommend',
       name: 'recommend',
-      component: Recommend
+      component: Recommend,
+      meta: { keepAlive: true }
     },
     {
       path: '/write',

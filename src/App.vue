@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header />
-    <router-view></router-view>
+    <keep-alive include="recommend">
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 

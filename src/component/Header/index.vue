@@ -2,16 +2,21 @@
   <div class="header">
     <div class="container">
       <ul class="nav">
-        <router-link
-          class="fz-normal"
-          v-for="item in navList"
-          :key="item.name"
-          :to="{ name: item.name }"
-          tag="li"
-          exact
-        >
-          {{item.text}}
-        </router-link>
+        <template v-if="navList.length !== 1">
+          <router-link
+            class="fz-normal"
+            v-for="item in navList"
+            :key="item.name"
+            :to="{ name: item.name }"
+            tag="li"
+            exact
+          >
+            {{item.text}}
+          </router-link>
+        </template>
+        <template v-else>
+          <li class="fz-normal" @click="$router.back()">返回</li>
+        </template>
       </ul>
     </div>
   </div>
@@ -38,7 +43,7 @@ export default {
         case 'article':
         case 'write':
         return [
-          { text: '返回推荐', name: 'recommend' }
+          { text: '返回', name: '' }
         ]
         break
 
@@ -47,6 +52,11 @@ export default {
           { text: '晚安', name: 'intro' }
         ]
       }
+    }
+  },
+  methods: {
+    noAction () {
+      console.log(123)
     }
   }
 }
