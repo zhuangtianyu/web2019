@@ -11,9 +11,7 @@
           <div class="user-name fz-small">{{item.userName}}</div>
           <div class="create-time fz-smaller">{{item.createTime}}</div>
         </div>
-        <div class="content fz-small">
-          {{item.content}}
-        </div>
+        <div class="content fz-small" v-html="item.content"></div>
       </div>
     </template>
     <div class="no-comment fz-small" v-if="data.length === 0 && edit === false">暂无评论</div>

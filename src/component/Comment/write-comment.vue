@@ -48,8 +48,8 @@ export default {
       if (this.params.content === '') {
         return this.$modal({ message: '请输入评论' })
       }
-      if (this.params.content.length > 120) {
-        return this.$modal({ message: '评论长度不超过120字' })
+      if (this.params.content.length > 600) {
+        return this.$modal({ message: '评论长度不超过600字' })
       }
       return true
     },
@@ -60,7 +60,7 @@ export default {
       if (this.validate() !== true) { return }
       const articleID = this.$route.params.id
       const { userName, content } = this.params
-      this.$axios.post('/article/comment', { userName, content, articleID })
+      this.$axios.post('/article/comment', { userName, content: content.replace(/\n/g,'<br />'), articleID })
         .then(() => {
           this.$emit('reload')
           this.cancel()
