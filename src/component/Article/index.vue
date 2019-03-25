@@ -17,27 +17,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .article-main {
-    .title {
-      font-weight: bolder;
-      // margin-bottom: 0.3em;
-    }
-    .author-info {
-      margin-bottom: 1.2em;
-    }
-    p {
-      text-indent: 2em;
-      line-height: 1.82;
-      margin-bottom: 0.6em;
-      &:last-child {
-        margin-bottom: 0;
-      }
+.article-main {
+  .title {
+    font-weight: bolder;
+    // margin-bottom: 0.3em;
+  }
+  .author-info {
+    margin-bottom: 1.2em;
+  }
+  p {
+    // text-indent: 2em;
+    line-height: 1.82;
+    margin-bottom: 0.6em;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
+}
 
-  @media (max-width: 1200px) {
-    .article-main {
-      padding: 0 6px;
-    }
+@media (max-width: 1200px) {
+  .article-main {
+    padding: 0 6px;
   }
+}
 </style>
