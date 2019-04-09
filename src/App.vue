@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <keep-alive include="recommend">
-      <router-view></router-view>
-    </keep-alive>
+    <router-view />
   </div>
 </template>
 
@@ -17,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .header + div {
-    padding-top: 50px;
-  }
+.header + div {
+  padding-top: 50px;
+}
 </style>

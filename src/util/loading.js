@@ -16,7 +16,8 @@ const init = () => {
     left: 0,
     textAlign: 'center',
     paddingTop: '100px',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)'
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    zIndex: 10000
   }
   Object.assign(shadow.style, shadowStyle)
   shadow.classList.add('loading-shadow')

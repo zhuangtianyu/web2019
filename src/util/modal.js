@@ -46,7 +46,8 @@ const modal = (config) => {
       bottom: 0,
       left: 0,
       textAlign: 'center',
-      backgroundColor: 'rgba(0, 0, 0, 0.6)'
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      zIndex: 10000
     }
     append(body, shadow, shadowStyle, 'modal-shadow')
 

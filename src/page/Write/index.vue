@@ -88,7 +88,7 @@ export default {
       const content =
         Object.assign([], this.params.content)
           .filter(item => item !== '')
-          .map(item => item.replace(/\n/g,'<br />'))
+          .map(item => item.replace(/\n/g, '<br />'))
       if (content.length === 0) {
         return this.$modal({ message: '请填写内容' })
       }
@@ -119,91 +119,91 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .write {
-    padding-bottom: 20px;
-  }
+.write {
+  padding-bottom: 20px;
+}
 
-  .write-item  {
-    margin-bottom: 12px;
-    &:last-child {
-      margin-bottom: 0;
-    }
+.write-item {
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
   }
+}
 
-  .write-item {
-    font-size: 0;
-    .label {
-      display: inline-block;
-      vertical-align: middle;
-      width: 40px;
-      font-size: 14px;
-    }
-    .write-item-content {
-      display: inline-block;
-      vertical-align: middle;
-      width: 100%;
-      padding-left: 40px;
-      font-size: 14px;
-      margin-left: -40px;
-    }
-    &.content {
-      padding-bottom: 6px;
-      border-bottom: 1px solid #fff;
-      .label,
-      .write-item-content {
-        vertical-align: top;
-      }
-    }
-  }
-
-  .write-item-content input {
-    width: 60%;
-    max-width: 230px;
-    font-size: 14px;
-    height: 24px;
-    line-height: 20px;
-    padding: 0 3px;
-  }
-
-  .write-item-content .type-button {
+.write-item {
+  font-size: 0;
+  .label {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 3px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  .write-item-content textarea {
-    display: block;
-    width: 90%;
-    height: 80px;
+    width: 40px;
     font-size: 14px;
-    line-height: 20px;
-    padding: 0 3px;
-    margin-bottom: 10px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
-
-  .content-item {
-    resize: none;
-  }
-
-  .button-group {
+  .write-item-content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
     padding-left: 40px;
-    font-size: 0;
-    .submit {
-      margin-right: 10px;
+    font-size: 14px;
+    margin-left: -40px;
+  }
+  &.content {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #fff;
+    .label,
+    .write-item-content {
+      vertical-align: top;
     }
   }
+}
 
-  @media (max-width: 1200px) {
-    .write {
-      padding: 0 6px 20px;
-    }
+.write-item-content input {
+  width: 60%;
+  max-width: 230px;
+  font-size: 14px;
+  height: 24px;
+  line-height: 20px;
+  padding: 0 3px;
+}
+
+.write-item-content .type-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+  &:last-child {
+    margin-right: 0;
   }
+}
+
+.write-item-content textarea {
+  display: block;
+  width: 90%;
+  height: 280px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 3px;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content-item {
+  resize: none;
+}
+
+.button-group {
+  padding-left: 40px;
+  font-size: 0;
+  .submit {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .write {
+    padding: 0 6px 20px;
+  }
+}
 </style>
 
 

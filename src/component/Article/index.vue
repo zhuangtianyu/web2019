@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss" scoped>
 .article-main {
+  min-height: 120px;
   .title {
     font-weight: bolder;
     // margin-bottom: 0.3em;
