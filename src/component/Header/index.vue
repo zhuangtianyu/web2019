@@ -56,7 +56,7 @@ export default {
   position: fixed;
   width: 100%;
   // background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 40px;
   z-index: 100;
@@ -67,6 +67,7 @@ export default {
     position: relative;
     display: inline-block;
     vertical-align: top;
+    color: rgba(255, 255, 255, 0.5);
     padding: 0 0.6em;
     cursor: pointer;
     &:after {
@@ -78,7 +79,7 @@ export default {
       content: "";
       width: 1px;
       height: 14px;
-      background-color: #333;
+      background-color: rgba(255, 255, 255, 0.5);
     }
     &:first-child {
       padding-left: 0;
@@ -87,7 +88,7 @@ export default {
       display: none;
     }
     &.router-link-active {
-      color: #ff6a6a;
+      color: #fff;
     }
   }
 }

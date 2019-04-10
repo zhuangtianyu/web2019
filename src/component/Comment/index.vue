@@ -113,7 +113,7 @@ export default {
 
 @media (max-width: 1200px) {
   .comment {
-    padding: 0 6px;
+    padding: 12px 6px 0;
   }
 }
 </style>
