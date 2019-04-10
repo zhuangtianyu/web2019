@@ -19,14 +19,33 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  background-color: #efefef;
+  /* background-color: #efefef; */
+  position: relative;
+  z-index: 100;
 }
 
-html, body {
+html::after {
+  position: fixed;
+  content: "";
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../assets/web2019-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+html,
+body {
   height: 100%;
 }
 
-body, ul, p {
+body,
+ul,
+p {
   margin: 0;
 }
 
@@ -34,7 +53,8 @@ ul {
   padding: 0;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 

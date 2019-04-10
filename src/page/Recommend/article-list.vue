@@ -35,7 +35,8 @@ export default {
     cursor: pointer;
     padding: 12px 6px 6px;
     border-radius: 0.3em;
-    background-color: #fff;
+    // background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.6);
     margin-bottom: 10px;
     // &:last-child {
     //   margin-bottom: 0;

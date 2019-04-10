@@ -33,11 +33,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .article-page {
-    .article-main {
-      margin-bottom: 30px;
-    }
+.article-page {
+  padding-bottom: 20px;
+  .article-main {
+    padding: 10px;
+    border-radius: 0.3em;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 30px;
   }
+}
+
+@media (max-width: 1200px) {
+  .article-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 </style>
 
 

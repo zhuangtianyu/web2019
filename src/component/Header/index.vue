@@ -55,7 +55,8 @@ export default {
 .header {
   position: fixed;
   width: 100%;
-  background-color: #fff;
+  // background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   line-height: 40px;
   z-index: 100;
