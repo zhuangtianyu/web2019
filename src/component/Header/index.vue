@@ -49,7 +49,7 @@ export default {
     }
   },
   mounted () {
-    window.onscroll = this.setColor
+    // window.onscroll = this.setColor
   },
   methods: {
     setColor () {
