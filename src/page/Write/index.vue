@@ -137,6 +137,7 @@ export default {
     vertical-align: middle;
     width: 40px;
     font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
   }
   .write-item-content {
     display: inline-block;
@@ -185,6 +186,11 @@ export default {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.write-item-content input,
+.write-item-content textarea {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .content-item {

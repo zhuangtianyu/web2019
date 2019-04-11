@@ -43,6 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .resume .resume-item {
+  color: rgba(255, 255, 255, 0.8);
   padding: 6px;
   margin-bottom: 10px;
   border-bottom: 1px solid #fff;

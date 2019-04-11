@@ -67,7 +67,7 @@ export default {
     width: 100%;
     position: absolute;
     bottom: 0;
-    color: #666;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     text-align: center;
     line-height: 3em;

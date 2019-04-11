@@ -47,6 +47,18 @@ export default {
           ]
       }
     }
+  },
+  mounted () {
+    window.onscroll = this.setColor
+  },
+  methods: {
+    setColor () {
+      const header = document.querySelector('.header')
+      if (window.scrollY === 0) {
+        return header.classList.remove('scroll')
+      }
+      header.classList.add('scroll')
+    }
   }
 }
 </script>
@@ -70,7 +82,7 @@ export default {
     color: rgba(255, 255, 255, 0.5);
     padding: 0 0.6em;
     cursor: pointer;
-    &:after {
+    &::after {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -84,7 +96,7 @@ export default {
     &:first-child {
       padding-left: 0;
     }
-    &:last-child:after {
+    &:last-child::after {
       display: none;
     }
     &.router-link-active {
@@ -92,6 +104,20 @@ export default {
     }
   }
 }
+
+.header.scroll {
+  background-color: rgba(255, 255, 255, 0.9);
+  li {
+    color: #333;
+    &.router-link-active {
+      color: #ff6a6a;
+    }
+    &::after {
+      background-color: #333;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .header .nav li:first-child {
     padding-left: 6px;
